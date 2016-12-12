@@ -1,0 +1,87 @@
+Incorrect integer value: 'null' for column 'msisdn' at row 1[2016-11-07 15:39:02,762]  WARN {JAGGERY.request.saveLoginDetails:jag} -  Couldn't save to 'pendingussd' table. Phones that can't do NI USSD will not support.
+[2016-11-07 15:39:03,297] DEBUG {com.wso2telco.gsma.authenticators.MSISDNAuthenticator} -  MSISDN Authenticator canHandle invoked
+[2016-11-07 15:39:03,298]  INFO {com.wso2telco.gsma.authenticators.MSISDNAuthenticator} -  msisdn forwarding 
+[2016-11-07 15:39:03,298] DEBUG {com.wso2telco.gsma.authenticators.MSISDNAuthenticator} -  MSISDN Authenticator canHandle invoked
+[2016-11-07 15:39:03,298]  INFO {com.wso2telco.gsma.authenticators.MSISDNAuthenticator} -  msisdn forwarding 
+[2016-11-07 15:39:03,299]  INFO {com.wso2telco.gsma.authenticators.MSISDNAuthenticator} -  MSISDN by request parameter or context parameter: 910773524111
+[2016-11-07 15:39:03,300]  INFO {com.wso2telco.gsma.authenticators.MSISDNAuthenticator} -  MSISDN Authenticator authentication success for MSISDN - 910773524111
+[2016-11-07 15:39:03,300] DEBUG {com.wso2telco.authenticationstephandler.MIFEAuthenticationStepHandler} -  Scope:openid
+[2016-11-07 15:39:03,300] DEBUG {com.wso2telco.authenticationstephandler.MIFEAuthenticationStepHandler} -  response_type : code
+[2016-11-07 15:39:03,300] DEBUG {com.wso2telco.authenticationstephandler.MIFEAuthenticationStepHandler} -  MSISDNAuthenticator returned: SUCCESS_COMPLETED
+[2016-11-07 15:39:03,300]  INFO {com.wso2telco.authenticationstephandler.MIFEAuthenticationStepHandler} -  ===============================================================================setting authenticated user=============
+[2016-11-07 15:39:03,300] DEBUG {com.wso2telco.gsma.authenticators.ussd.USSDAuthenticator} -  USSD Authenticator canHandle invoked
+[2016-11-07 15:39:03,301] DEBUG {com.wso2telco.gsma.authenticators.DBUtils} -  Executing the query INSERT INTO clientstatus (SessionID, Status) VALUES (?,?) to Insert sessionDataKey : 9b25d632-aa12-4852-84dd-10f2ec4e4476and responseStatus PENDING
+[2016-11-07 15:39:03,304]  INFO {com.wso2telco.gsma.authenticators.ussd.USSDAuthenticator} -  Service Provider Name = patch005
+[2016-11-07 15:39:03,304]  INFO {com.wso2telco.gsma.authenticators.ussd.USSDAuthenticator} -  operator:null
+[2016-11-07 15:39:03,304]  INFO {com.wso2telco.gsma.authenticators.ussd.SendUSSD} -  massage:Message content for USSD authenticationpatch005
+[2016-11-07 15:39:03,305] DEBUG {com.wso2telco.gsma.authenticators.ussd.SendUSSD} -  endpoint :http://localhost:8080/ussdstub/v1/outbound/tel:+910773524111
+[2016-11-07 15:39:03,305] DEBUG {com.wso2telco.gsma.authenticators.ussd.SendUSSD} -  reqstr :{"outboundUSSDMessageRequest":{"address":"tel:+910773524111","shortCode":"1721","keyword":"123","outboundUSSDMessage":"Message content for USSD authenticationpatch005\n1. Yes\n2. No","clientCorrelator":"9b25d632-aa12-4852-84dd-10f2ec4e4476","responseRequest":{"notifyURL":"http://localhost:9763/sessionupdater/tnspoints/endpoint/ussd/receive","callbackData":""},"ussdAction":"mtinit"}}
+[2016-11-07 15:39:03,305]  INFO {com.wso2telco.gsma.authenticators.ussd.SendUSSD} -  [sendUSSD][reqString] : {"outboundUSSDMessageRequest":{"address":"tel:+910773524111","shortCode":"1721","keyword":"123","outboundUSSDMessage":"Message content for USSD authenticationpatch005\n1. Yes\n2. No","clientCorrelator":"9b25d632-aa12-4852-84dd-10f2ec4e4476","responseRequest":{"notifyURL":"http://localhost:9763/sessionupdater/tnspoints/endpoint/ussd/receive","callbackData":""},"ussdAction":"mtinit"}}
+[2016-11-07 15:39:03,334] ERROR {com.wso2telco.gsma.authenticators.ussd.SendUSSD} -  Error occured while calling end points - 200-OK
+[2016-11-07 15:39:03,335]  INFO {com.wso2telco.gsma.authenticators.ussd.USSDAuthenticator} -  query params: acr_values=2&client_id=vlXBSUUm5N9RtjKrZwGKAp2G8Z0a&commonAuthCallerPath=%2Foauth2%2Fauthorize&forceAuth=false&msisdn_header=&nonce=eAZygXd2yBonce%3D565qwe&operator=spark&passiveAuth=false&redirect_uri=https%3A%2F%2F52.8.36.61%3A9443%2Fplayground2%2Foauth2.jsp&response_type=code&scope=openid&state=7GKdHvznP8&telco_scope=openid&tenantDomain=carbon.super&sessionDataKey=9b25d632-aa12-4852-84dd-10f2ec4e4476&relyingParty=vlXBSUUm5N9RtjKrZwGKAp2G8Z0a&type=oidc&sp=patch005&isSaaSApp=false
+[2016-11-07 15:39:03,337]  INFO {com.wso2telco.gsma.authenticators.ussd.USSDAuthenticator} -  Context_RedirectURI:null
+[2016-11-07 15:39:03,337] DEBUG {com.wso2telco.authenticationstephandler.MIFEAuthenticationStepHandler} -  Scope:openid
+[2016-11-07 15:39:03,337] DEBUG {com.wso2telco.authenticationstephandler.MIFEAuthenticationStepHandler} -  response_type : code
+[2016-11-07 15:39:03,338] DEBUG {com.wso2telco.authenticationstephandler.MIFEAuthenticationStepHandler} -  USSDAuthenticator returned: INCOMPLETE
+[2016-11-07 15:39:03,338] DEBUG {com.wso2telco.authenticationstephandler.MIFEAuthenticationStepHandler} -  USSDAuthenticator is redirecting
+[2016-11-07 15:39:08,364] DEBUG {com.wso2telco.gsma.authenticators.ussd.USSDAuthenticator} -  USSD Authenticator canHandle invoked
+[2016-11-07 15:39:08,365] DEBUG {com.wso2telco.gsma.authenticators.ussd.USSDAuthenticator} -  USSD Authenticator canHandle invoked
+[2016-11-07 15:39:08,366] DEBUG {com.wso2telco.gsma.authenticators.DBUtils} -  Executing the query SELECT SessionID, Status FROM clientstatus WHERE SessionID=? for sessionDataKey : 9b25d632-aa12-4852-84dd-10f2ec4e4476
+[2016-11-07 15:39:08,366]  INFO {com.wso2telco.gsma.authenticators.ussd.USSDAuthenticator} -  USSD Authenticator authentication success
+[2016-11-07 15:39:08,367] DEBUG {com.wso2telco.authenticationstephandler.MIFEAuthenticationStepHandler} -  Scope:openid
+[2016-11-07 15:39:08,367] DEBUG {com.wso2telco.authenticationstephandler.MIFEAuthenticationStepHandler} -  response_type : code
+[2016-11-07 15:39:08,367] DEBUG {com.wso2telco.authenticationstephandler.MIFEAuthenticationStepHandler} -  USSDAuthenticator returned: SUCCESS_COMPLETED
+[2016-11-07 15:39:08,367]  INFO {com.wso2telco.authenticationstephandler.MIFEAuthenticationStepHandler} -  ===============================================================================setting authenticated user=============
+[2016-11-07 15:39:08,367] ERROR {org.wso2.carbon.identity.application.authentication.framework.handler.request.impl.DefaultRequestCoordinator} -  Exception in Authentication Framework
+java.lang.NullPointerException
+	at org.wso2.carbon.identity.application.authentication.framework.handler.sequence.impl.DefaultStepBasedSequenceHandler.handlePostAuthentication(DefaultStepBasedSequenceHandler.java:206)
+	at com.wso2telco.stepbasedsequencehandler.MIFEStepBasedSequenceHandler.handle(MIFEStepBasedSequenceHandler.java:134)
+	at org.wso2.carbon.identity.application.authentication.framework.handler.request.impl.DefaultAuthenticationRequestHandler.handle(DefaultAuthenticationRequestHandler.java:115)
+	at org.wso2.carbon.identity.application.authentication.framework.handler.request.impl.DefaultRequestCoordinator.handle(DefaultRequestCoordinator.java:135)
+	at org.wso2.carbon.identity.application.authentication.framework.servlet.CommonAuthenticationServlet.doPost(CommonAuthenticationServlet.java:53)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:646)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.eclipse.equinox.http.helper.ContextPathServletAdaptor.service(ContextPathServletAdaptor.java:37)
+	at org.eclipse.equinox.http.servlet.internal.ServletRegistration.service(ServletRegistration.java:61)
+	at org.eclipse.equinox.http.servlet.internal.ProxyServlet.processAlias(ProxyServlet.java:128)
+	at org.eclipse.equinox.http.servlet.internal.ProxyServlet.service(ProxyServlet.java:60)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.wso2.carbon.tomcat.ext.servlet.DelegationServlet.service(DelegationServlet.java:68)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.wso2.carbon.ui.filters.CSRFPreventionFilter.doFilter(CSRFPreventionFilter.java:88)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.wso2.carbon.ui.filters.CRLFPreventionFilter.doFilter(CRLFPreventionFilter.java:59)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.wso2.carbon.tomcat.ext.filter.CharacterSetFilter.doFilter(CharacterSetFilter.java:61)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:504)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.wso2.carbon.tomcat.ext.valves.CompositeValve.continueInvocation(CompositeValve.java:99)
+	at org.wso2.carbon.tomcat.ext.valves.CarbonTomcatValve$1.invoke(CarbonTomcatValve.java:47)
+	at org.wso2.carbon.webapp.mgt.TenantLazyLoaderValve.invoke(TenantLazyLoaderValve.java:57)
+	at org.wso2.carbon.tomcat.ext.valves.TomcatValveContainer.invokeValves(TomcatValveContainer.java:47)
+	at org.wso2.carbon.tomcat.ext.valves.CompositeValve.invoke(CompositeValve.java:62)
+	at org.wso2.carbon.tomcat.ext.valves.CarbonStuckThreadDetectionValve.invoke(CarbonStuckThreadDetectionValve.java:159)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.wso2.carbon.tomcat.ext.valves.CarbonContextCreatorValve.invoke(CarbonContextCreatorValve.java:57)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:421)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1074)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:611)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1698)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
